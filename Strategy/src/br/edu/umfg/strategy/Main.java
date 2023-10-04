@@ -2,8 +2,6 @@ package br.edu.umfg.strategy;
 
 import java.util.Scanner;
 
-// ... (Códigos de classe do pagamento e do carrinho de compras permanecem os mesmos)
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,11 +19,11 @@ public class Main {
 
             System.out.print("Digite o número da opção desejada: ");
             int escolha = scanner.nextInt();
-            scanner.nextLine(); // Limpa o buffer do scanner
+            scanner.nextLine(); 
 
             if (escolha == 0) {
                 System.out.println("Saindo do sistema de pagamento.");
-                break; // Sai do loop se a escolha for 0
+                break; 
             }
 
             Produto produtoSelecionado = null;
@@ -41,7 +39,7 @@ public class Main {
 
                 default:
                     System.out.println("Opção inválida.");
-                    continue; // Continua o loop se a escolha for inválida
+                    continue;
             }
 
             System.out.println("Produto selecionado: " + produtoSelecionado.getDescricao());
@@ -56,11 +54,11 @@ public class Main {
 
                 System.out.print("Digite o número da opção desejada: ");
                 int opcao = scanner.nextInt();
-                scanner.nextLine(); // Limpa o buffer do scanner
+                scanner.nextLine(); 
 
                 if (opcao == 0) {
                     System.out.println("Saindo do sistema de pagamento.");
-                    break; // Sai do loop se a escolha for 0
+                    break; 
                 }
 
                 switch (opcao) {
@@ -93,7 +91,7 @@ public class Main {
 
                     default:
                         System.out.println("Opção inválida.");
-                        continue; // Continua o loop se a escolha for inválida
+                        continue; 
                 }
 
                 System.out.print("Digite o valor a ser pago: R$ ");
@@ -103,7 +101,7 @@ public class Main {
 
                 if (pagamentoRealizado) {
                     System.out.println("Pagamento realizado com sucesso!");
-                    break; // Sai do loop após o pagamento bem-sucedido
+                    break; 
                 } else {
                     System.out.println("Falha no pagamento. Verifique os dados e tente novamente.");
                 }
